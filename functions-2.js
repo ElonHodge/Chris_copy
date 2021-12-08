@@ -98,32 +98,26 @@ filterLongWords = (array,num) => {
 
 console.log("8) filterLongWords: " +filterLongWords(arrayWords,11))
 
-// Bonus
+// ******Bonus*********
 String.prototype.reverseString = function (){
+    let obj = {};
 
-    let array = [];
     for (let j = 0; j <alphabet.length ; j++) {
         let counter = 0;
         for (let i = 0; i <this.length ; i++) {
-            if (  alphabet[j] === this.charAt(i).toLowerCase()){
-                counter ++;
-            }
-
+            if (  alphabet[j] === this.charAt(i).toLowerCase()) counter ++;
         }
-        if (counter > 0){
-            array.push(alphabet[j]+" : "+counter);
-
-        }
-
+        if (counter > 0) obj[alphabet[j]] = counter
 
     }
-    array.forEach((element)=>{
-        console.log(element)
-    })
+
+        console.log(obj)
 
 }
 
-
+console.log("******Bonus*********")
 "Per Scholas".reverseString()
+
+
 
 
